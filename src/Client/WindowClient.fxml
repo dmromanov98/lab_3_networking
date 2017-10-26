@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.WindowClientController">
+   <children>
+      <JFXTextField fx:id="text" focusColor="#2e5eee" labelFloat="true" layoutX="14.0" layoutY="41.0" prefHeight="25.0" prefWidth="569.0" promptText="Enter your string here" unFocusColor="#529a00" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="50.0" StackPane.alignment="TOP_CENTER">
+         <StackPane.margin>
+            <Insets left="15.0" right="15.0" top="80.0" />
+         </StackPane.margin></JFXTextField>
+      <JFXCheckBox fx:id="CBdel" layoutX="17.0" layoutY="154.0" onAction="#DeleteString" text="Удаление самой длинной строки" StackPane.alignment="TOP_LEFT">
+         <StackPane.margin>
+            <Insets left="15.0" top="190.0" />
+         </StackPane.margin></JFXCheckBox>
+      <JFXCheckBox fx:id="CBclear" layoutX="17.0" layoutY="182.0" onAction="#ClearArray" text="Очистка массива" StackPane.alignment="TOP_LEFT">
+         <StackPane.margin>
+            <Insets left="15.0" top="220.0" />
+         </StackPane.margin></JFXCheckBox>
+      <JFXCheckBox fx:id="CBgetstr" layoutX="17.0" layoutY="208.0" onAction="#GetString" text="Получить строку с заданным номером из массива" StackPane.alignment="TOP_LEFT">
+         <StackPane.margin>
+            <Insets left="15.0" top="250.0" />
+         </StackPane.margin></JFXCheckBox>
+      <JFXButton fx:id="button" buttonType="RAISED" layoutX="17.0" layoutY="92.0" onAction="#SendMessage" prefHeight="47.0" prefWidth="109.0" ripplerFill="#00ff22" style="-fx-background-color: #ffffff;" text="Send text" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" AnchorPane.rightAnchor="17.0" StackPane.alignment="TOP_LEFT">
+         <effect>
+            <Blend opacity="0.0" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <font>
+            <Font size="14.0" />
+         </font>
+         <StackPane.margin>
+            <Insets left="475.0" top="110.0" />
+         </StackPane.margin>
+      </JFXButton>
+      <JFXTextField fx:id="textIP" focusColor="#2e5eee" labelFloat="true" prefHeight="25.0" prefWidth="195.0" promptText="IP" unFocusColor="#529a00" StackPane.alignment="TOP_LEFT">
+         <StackPane.margin>
+            <Insets left="15.0" right="400.0" top="30.0" />
+         </StackPane.margin>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="17.0" layoutY="92.0" onAction="#ConnectServer" prefHeight="27.0" prefWidth="169.0" ripplerFill="#00ff22" style="-fx-background-color: #ffffff;" text="Connect to server" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" StackPane.alignment="TOP_LEFT">
+         <StackPane.margin>
+            <Insets left="210.0" top="30.0" />
+         </StackPane.margin>
+      </JFXButton>
+   </children>
+</StackPane>
